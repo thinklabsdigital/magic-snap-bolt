@@ -6,9 +6,7 @@ export function Introduction() {
     {
       icon: <Camera className="w-6 h-6" />,
       title: "Simple Yet Powerful",
-      description: "Master smartphone photography with easy-to-follow techniques that produce stunning results.",
-      titleClass: "text-rose-300",
-      descriptionClass: "text-gray-300"
+      description: "Master smartphone photography with easy-to-follow techniques that produce stunning results."
     },
     {
       icon: <Clock className="w-6 h-6" />,
@@ -38,16 +36,7 @@ export function Introduction() {
   ];
 
   return (
-    <section className="py-20 bg-gray-900 relative overflow-hidden">
-      {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-rose-950/30 to-gray-900/30"></div>
-      
-      {/* Background pattern */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0 bg-curved-pattern animate-float-gentle"></div>
-        </div>
-      </div>
+    <section className="py-20 bg-gradient-to-b from-white to-rose-50 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="hidden md:block">
