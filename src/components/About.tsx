@@ -177,9 +177,7 @@ export function About() {
             <p>
               <strong className="text-rose-600">SnuggleShots</strong> is a pioneering force in family photography education, dedicated to revolutionizing how parents capture their children's precious moments. Founded by passionate photographers and parents, we understand the challenges of documenting childhood's fleeting instances.
             </p>
-            <p>
-              With over 5 years of expertise in smartphone photography education, <strong className="text-rose-600">SnuggleShots</strong> has helped thousands of parents transform their everyday photos into stunning visual stories. Our unique approach combines technical expertise with practical, easy-to-follow guidance that works for busy parents.
-            </p>
+            
             <p>
               We believe that every parent deserves to capture professional-quality photos of their children without investing in expensive equipment or lengthy training. Through our carefully crafted resources and innovative teaching methods, <strong className="text-rose-600">SnuggleShots</strong> empowers parents to preserve their family's precious moments with confidence and creativity.
             </p>
@@ -201,7 +199,7 @@ export function About() {
         {/* Testimonials section */}
         <div className="max-w-6xl mx-auto">
           <h3 className="text-2xl font-bold text-center mb-8">
-            What <span className="text-rose-600">Indian Parents</span> Are Saying
+            Listen What <span className="text-rose-600">Parents</span> Like You Are Saying
           </h3>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
