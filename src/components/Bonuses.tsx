@@ -105,10 +105,10 @@ export function Bonuses() {
             <p className="text-lg text-gray-700 mb-8">
               Seize this opportunity to enhance your baby photography journey and create lasting memories!
             </p>
-            <button className="btn-primary group">
+            <a href="https://pages.razorpay.com/magicsnap" className="btn-primary group">
               <span>Claim Your Bonuses Now!</span>
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </a>
           </div>
         </div>
       </div>

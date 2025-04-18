@@ -141,13 +141,13 @@ export function Introduction() {
 
         {/* CTA Section */}
         <div className="text-center">
-          <button className="group bg-rose-600 hover:bg-rose-500 text-white px-8 py-4 rounded-full 
+          <a href="https://pages.razorpay.com/magicsnap" className="group bg-rose-600 hover:bg-rose-500 text-white px-8 py-4 rounded-full 
                            text-lg font-medium inline-flex items-center gap-3 
                            transform hover:scale-105 transition-all duration-300
                            shadow-lg shadow-rose-200">
             Start Creating Beautiful Memories
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
+          </a>
         </div>
       </div>
     </section>

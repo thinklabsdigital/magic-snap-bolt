@@ -175,12 +175,12 @@ export function Package() {
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-rose-600 text-white px-8 py-4 rounded-full text-lg font-semibold 
+          <a href="https://pages.razorpay.com/magicsnap" className="bg-rose-600 text-white px-8 py-4 rounded-full text-lg font-semibold 
                            hover:bg-rose-500 transition-colors inline-flex items-center gap-2
                            transform hover:scale-105 duration-300 shadow-lg">
             Create Your Baby's Visual Story
             <ChevronDown className="w-5 h-5 animate-bounce" />
-          </button>
+          </a>
         </div>
       </div>
     </section>

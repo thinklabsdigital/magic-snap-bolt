@@ -112,13 +112,13 @@ export function Hero() {
 
             {/* CTA Section */}
             <div className="space-y-6">
-              <button className="group bg-rose-600 hover:bg-rose-500 text-white px-8 py-4 rounded-full 
+              <a href="https://pages.razorpay.com/magicsnap" className="group bg-rose-600 hover:bg-rose-500 text-white px-8 py-4 rounded-full 
                                text-lg font-medium inline-flex items-center gap-3 
                                transform hover:scale-105 transition-all duration-300
                                shadow-lg shadow-rose-900/50">
                 Never Miss a Giggle Again!
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </a>
               <p className="text-gray-400 text-sm">
                 Join <span className="text-rose-400">1000s</span> of happy parents capturing beautiful moments & documenting their milestones!
               </p>
