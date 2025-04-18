@@ -53,13 +53,7 @@ function ComparisonCard({ title, items, icon, isPrimary = true }) {
         
         {isPrimary && (
           <div className="mt-8 text-center">
-            <button className="group bg-rose-600 text-white px-6 py-3 rounded-full 
-                             font-medium inline-flex items-center gap-2 
-                             hover:bg-rose-500 transition-all duration-300
-                             shadow-lg shadow-rose-200/50 transform hover:scale-105">
-              Get Started
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </button>
+           
           </div>
         )}
       </div>
@@ -185,17 +179,14 @@ export function Comparison() {
         {/* Enhanced Benefits highlight */}
         <div className="max-w-4xl mx-auto mt-16 text-center bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-rose-100 shadow-xl transform transition-all duration-500 hover:shadow-2xl">
           <h3 className="text-2xl font-bold text-gray-900 mb-4">
-            Join <span className="text-rose-600">thousands of parents</span> who are capturing childhood's most precious moments!
+            Join <span className="text-rose-600">1000s of parents</span> who are capturing childhood's most precious moments!
           </h3>
-          <p className="text-gray-600 mb-6 max-w-xl mx-auto">
-            Don't let another magical moment slip by uncaptured. Transform your phone into a professional 
-            camera with our easy-to-follow techniques.
-          </p>
+
           <button className="group bg-gradient-to-r from-rose-500 to-rose-600 hover:from-rose-600 hover:to-rose-500 text-white px-8 py-4 rounded-full 
                            text-lg font-medium inline-flex items-center gap-3 
                            transform hover:scale-105 transition-all duration-300
                            shadow-lg shadow-rose-200 relative overflow-hidden">
-            <span className="relative z-10">Start Your Photography Journey</span>
+            <span className="relative z-10">Start Your Photography Journey Today!</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" />
             <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
           </button>
