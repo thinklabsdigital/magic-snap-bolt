@@ -20,19 +20,18 @@ export function Bonuses() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-rose-500/10 backdrop-blur-sm rounded-full 
-                         px-6 py-3 mb-6 border border-rose-500/20">
-            <Gift className="w-5 h-5 text-rose-500" />
-            <span className="text-rose-700 font-semibold">Limited Time Offer</span>
+        <div className="flex flex-col items-center justify-center mb-12">
+          {/* Gift icon */}
+          <div className="w-20 h-20 bg-rose-100 rounded-full flex items-center justify-center mb-6">
+            <Gift className="w-10 h-10 text-rose-600" />
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-8">
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-8 text-center">
             Fast Action <span className="bg-gradient-to-r from-rose-500 to-rose-600 bg-clip-text text-transparent">Bonuses</span>
           </h2>
 
           {/* Fast Action Banner */}
-          <div className="bg-rose-50/80 backdrop-blur-sm rounded-full px-6 py-3 inline-flex items-center justify-center border border-rose-300/50 mb-8">
+          <div className="bg-rose-50/80 backdrop-blur-sm rounded-full px-6 py-3 inline-flex items-center justify-center border border-rose-100 mb-6">
             <Clock className="w-5 h-5 text-rose-600 mr-2" />
             <p className="text-rose-700 font-medium">
               For the next <span className="text-rose-600 font-bold">10 people</span> who take action today!
@@ -40,9 +39,9 @@ export function Bonuses() {
           </div>
           
           {/* Total Value Pill */}
-          <div className="inline-block bg-gradient-to-r from-amber-400 to-amber-500 rounded-full px-6 py-3 mb-8 shadow-lg">
+          <div className="inline-block bg-amber-500 rounded-full px-6 py-3 shadow-lg mb-12">
             <p className="text-white font-bold flex items-center">
-              <Sparkles className="w-5 h-5 mr-2 animate-pulse" />
+              <Sparkles className="w-5 h-5 mr-2" />
               Total Value: ₹11,500
             </p>
           </div>
@@ -50,23 +49,24 @@ export function Bonuses() {
 
         {/* Bonus Cards in New Design */}
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <div className="bg-gradient-to-b from-indigo-900 to-indigo-800 rounded-2xl shadow-xl overflow-hidden group hover:shadow-indigo-200/30 transform hover:translate-y-[-8px] transition-all duration-300">
-            <div className="h-28 bg-gradient-to-r from-indigo-600 to-indigo-500 flex items-center justify-center p-6">
-              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-full">
-                <Star className="w-8 h-8 text-white" />
+          {/* Bonus 1 */}
+          <div className="bg-gradient-to-b from-indigo-900 to-indigo-800 rounded-2xl shadow-xl overflow-hidden hover:shadow-lg transform hover:translate-y-[-8px] transition-all duration-300">
+            <div className="w-full bg-indigo-800 flex items-center justify-center p-6">
+              <div className="w-14 h-14 bg-indigo-700/50 rounded-full flex items-center justify-center">
+                <Check className="w-8 h-8 text-white" />
               </div>
             </div>
             <div className="p-6 text-center">
-              <div className="inline-block bg-amber-400 text-white text-xs font-bold px-3 py-1 rounded-full -mt-10 mb-4 relative">
+              <div className="inline-block bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full -mt-10 mb-4 relative">
                 Valued at ₹1,500
               </div>
               <h3 className="text-xl font-bold mb-4 text-white">
                 49 Winning Product Niches
               </h3>
-              <p className="text-indigo-100 mb-4 text-sm">
+              <p className="text-indigo-100 mb-6 text-sm">
                 Discover proven niches that convert! Save countless hours of research with our carefully curated list of winning product opportunities.
               </p>
-              <div className="space-y-2 mb-6">
+              <div className="space-y-2 mb-6 text-left">
                 <div className="flex items-center text-indigo-200 text-sm">
                   <Check className="w-4 h-4 mr-2 text-indigo-300" />
                   <span>Proven market demand</span>
@@ -77,28 +77,29 @@ export function Bonuses() {
                 </div>
               </div>
               <a href="https://pages.razorpay.com/magicsnap" className="block w-full py-3 bg-indigo-500 hover:bg-indigo-400 text-white rounded-lg font-medium transition-colors">
-                Claim Now
+                Claim Now <ArrowRight className="w-4 h-4 inline-block ml-1" />
               </a>
             </div>
           </div>
 
-          <div className="bg-gradient-to-b from-blue-900 to-blue-800 rounded-2xl shadow-xl overflow-hidden group hover:shadow-blue-200/30 transform hover:translate-y-[-8px] transition-all duration-300">
-            <div className="h-28 bg-gradient-to-r from-blue-600 to-blue-500 flex items-center justify-center p-6">
-              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-full">
+          {/* Bonus 2 */}
+          <div className="bg-gradient-to-b from-blue-900 to-blue-800 rounded-2xl shadow-xl overflow-hidden hover:shadow-lg transform hover:translate-y-[-8px] transition-all duration-300">
+            <div className="w-full bg-blue-800 flex items-center justify-center p-6">
+              <div className="w-14 h-14 bg-blue-700/50 rounded-full flex items-center justify-center">
                 <FileText className="w-8 h-8 text-white" />
               </div>
             </div>
             <div className="p-6 text-center">
-              <div className="inline-block bg-amber-400 text-white text-xs font-bold px-3 py-1 rounded-full -mt-10 mb-4 relative">
+              <div className="inline-block bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full -mt-10 mb-4 relative">
                 Valued at ₹5,000
               </div>
               <h3 className="text-xl font-bold mb-4 text-white">
                 Step by Step Training
               </h3>
-              <p className="text-blue-100 mb-4 text-sm">
+              <p className="text-blue-100 mb-6 text-sm">
                 Get comprehensive training that walks you through the entire process of launching and scaling your digital products.
               </p>
-              <div className="space-y-2 mb-6">
+              <div className="space-y-2 mb-6 text-left">
                 <div className="flex items-center text-blue-200 text-sm">
                   <Check className="w-4 h-4 mr-2 text-blue-300" />
                   <span>Video tutorials</span>
@@ -109,28 +110,29 @@ export function Bonuses() {
                 </div>
               </div>
               <a href="https://pages.razorpay.com/magicsnap" className="block w-full py-3 bg-blue-500 hover:bg-blue-400 text-white rounded-lg font-medium transition-colors">
-                Claim Now
+                Claim Now <ArrowRight className="w-4 h-4 inline-block ml-1" />
               </a>
             </div>
           </div>
 
-          <div className="bg-gradient-to-b from-purple-900 to-purple-800 rounded-2xl shadow-xl overflow-hidden group hover:shadow-purple-200/30 transform hover:translate-y-[-8px] transition-all duration-300">
-            <div className="h-28 bg-gradient-to-r from-purple-600 to-purple-500 flex items-center justify-center p-6">
-              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-full">
-                <Gift className="w-8 h-8 text-white" />
+          {/* Bonus 3 */}
+          <div className="bg-gradient-to-b from-purple-900 to-purple-800 rounded-2xl shadow-xl overflow-hidden hover:shadow-lg transform hover:translate-y-[-8px] transition-all duration-300">
+            <div className="w-full bg-purple-800 flex items-center justify-center p-6">
+              <div className="w-14 h-14 bg-purple-700/50 rounded-full flex items-center justify-center">
+                <Star className="w-8 h-8 text-white" />
               </div>
             </div>
             <div className="p-6 text-center">
-              <div className="inline-block bg-amber-400 text-white text-xs font-bold px-3 py-1 rounded-full -mt-10 mb-4 relative">
+              <div className="inline-block bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full -mt-10 mb-4 relative">
                 Valued at ₹5,000
               </div>
               <h3 className="text-xl font-bold mb-4 text-white">
                 No Restrictions
               </h3>
-              <p className="text-purple-100 mb-4 text-sm">
+              <p className="text-purple-100 mb-6 text-sm">
                 Launch unlimited products! Explore multiple ideas and markets without any restrictions on your creativity.
               </p>
-              <div className="space-y-2 mb-6">
+              <div className="space-y-2 mb-6 text-left">
                 <div className="flex items-center text-purple-200 text-sm">
                   <Check className="w-4 h-4 mr-2 text-purple-300" />
                   <span>Unlimited products</span>
@@ -141,30 +143,20 @@ export function Bonuses() {
                 </div>
               </div>
               <a href="https://pages.razorpay.com/magicsnap" className="block w-full py-3 bg-purple-500 hover:bg-purple-400 text-white rounded-lg font-medium transition-colors">
-                Claim Now
+                Claim Now <ArrowRight className="w-4 h-4 inline-block ml-1" />
               </a>
             </div>
           </div>
         </div>
 
         {/* Limited Time Offer */}
-        <div className="mt-10 text-center">
+        <div className="mt-12 text-center">
           <div className="inline-block bg-rose-50 border border-rose-200 rounded-lg px-6 py-3 shadow-md">
             <div className="flex items-center justify-center gap-2 text-rose-700">
               <Clock className="w-5 h-5 text-rose-600" />
               <p className="font-semibold">Limited Time Offer - Only 10 spots available!</p>
             </div>
           </div>
-        </div>
-
-        <div className="text-center mt-10">
-          <a href="https://pages.razorpay.com/magicsnap" className="group bg-rose-600 hover:bg-rose-500 text-white px-8 py-4 rounded-full 
-                           text-lg font-medium inline-flex items-center gap-3 
-                           transform hover:scale-105 transition-all duration-300
-                           shadow-lg shadow-rose-200">
-            <span>Claim All Bonuses Now!</span>
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </a>
         </div>
       </div>
     </section>

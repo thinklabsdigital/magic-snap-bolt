@@ -18,16 +18,15 @@ function App() {
   return (
     <>
       <Hero />
-      <Introduction />
       <Features />
-      <Comparison />
       <Questions />
-      <Vision />
-      <About />
+      <Introduction />
       <Package />
-      <Bonuses />
+      <Comparison />
+      <About />
       <Pricing />
-      <FAQ />
+      <Bonuses />
+      <Vision />
       <PS />
       <Footer />
     </>
