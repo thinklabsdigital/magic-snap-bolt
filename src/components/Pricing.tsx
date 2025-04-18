@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowRight, Check, Package, Tag, Sparkles, Star, Clock } from 'lucide-react';
 
@@ -20,11 +19,6 @@ export function Pricing() {
     { name: "Chottu Cheers - Spotify Playlists", price: "₹999" }
   ];
 
-  // Calculate time remaining
-  const hours = 24;
-  const minutes = 59;
-  const seconds = 59;
-
   return (
     <section className="py-20 bg-gradient-to-b from-rose-100 to-rose-200 relative overflow-hidden">
       {/* Gradient overlays */}
@@ -38,7 +32,7 @@ export function Pricing() {
         <div className="block">
           <div className="absolute top-20 left-[10%] w-64 h-64 bg-rose-100 rounded-full filter blur-3xl opacity-30 animate-float"></div>
           <div className="absolute bottom-40 right-[5%] w-80 h-80 bg-rose-200 rounded-full filter blur-3xl opacity-20 animate-float-gentle"></div>
-          
+
           <Package className="absolute top-20 left-[15%] w-8 h-8 text-rose-200 animate-float" />
           <Star className="absolute top-40 right-[20%] w-6 h-6 text-rose-200 animate-pulse" />
           <Tag className="absolute bottom-32 left-[25%] w-7 h-7 text-rose-200 animate-float-gentle" />
@@ -54,103 +48,78 @@ export function Pricing() {
             <Clock className="w-5 h-5 text-rose-500" />
             <span className="text-rose-700 font-semibold">Limited Time Offer - 96% OFF</span>
           </div>
-          
+
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-2">
             Here's <span className="text-rose-600">Everything You Get</span> When You Sign Up Today
           </h2>
         </div>
-        
+
         {/* Main Card */}
         <div className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-xl overflow-hidden border border-rose-100 
                       transform hover:scale-[1.01] transition-all duration-300">
-          
-          {/* Timer Section */}
-          <div className="bg-rose-50/80 p-6 text-center">
-            <p className="text-rose-700 font-medium mb-3">Special Offer Ends In:</p>
-            
-            <div className="flex justify-center gap-3 mb-4">
-              <div className="bg-rose-600 text-white w-14 h-14 rounded-lg flex flex-col items-center justify-center">
-                <span className="text-xl font-bold">{hours}</span>
-                <span className="text-xs">Hours</span>
-              </div>
-              <div className="bg-rose-600 text-white w-14 h-14 rounded-lg flex flex-col items-center justify-center">
-                <span className="text-xl font-bold">{minutes}</span>
-                <span className="text-xs">Minutes</span>
-              </div>
-              <div className="bg-rose-600 text-white w-14 h-14 rounded-lg flex flex-col items-center justify-center">
-                <span className="text-xl font-bold">{seconds}</span>
-                <span className="text-xs">Seconds</span>
-              </div>
-            </div>
-            
-            <p className="text-sm text-rose-600 flex items-center justify-center gap-1">
-              <Star className="w-4 h-4" />
-              <span>3,247 parents already enrolled</span>
-            </p>
-          </div>
-          
+
           {/* Features List */}
           <div className="p-8">
             <h3 className="font-bold text-lg mb-6 flex items-center">
               <Check className="w-5 h-5 text-rose-500 mr-2" />
               Core Program Features:
             </h3>
-            
+
             <div className="space-y-4 mb-8">
               {features.map((feature, index) => (
-                <div key={index} className="flex flex-col sm:flex-row sm:justify-between group py-2 border-b border-rose-50">
-                  <div className="flex items-center mb-1 sm:mb-0">
+                <div key={index} className="flex justify-between items-center group py-2 border-b border-rose-50">
+                  <div className="flex items-center">
                     <div className="w-6 h-6 rounded-full bg-rose-100 flex items-center justify-center mr-3 
                                  group-hover:bg-rose-200 transition-colors">
                       <Check className="w-4 h-4 text-rose-600" />
                     </div>
                     <span className="group-hover:text-rose-700 transition-colors">{feature.name}</span>
                   </div>
-                  <span className="font-semibold text-rose-600 ml-9 sm:ml-0">{feature.price}</span>
+                  <span className="font-semibold text-rose-600">{feature.price}</span>
                 </div>
               ))}
             </div>
-            
+
             {/* Bonuses Section */}
             <h3 className="font-bold text-lg mb-6 flex items-center">
               <Sparkles className="w-5 h-5 text-rose-500 mr-2" />
               Exclusive Bonuses:
             </h3>
-            
+
             <div className="space-y-4 mb-8">
               {bonuses.map((bonus, index) => (
-                <div key={index} className="flex flex-col sm:flex-row sm:justify-between group py-2 border-b border-rose-50">
-                  <div className="flex items-center mb-1 sm:mb-0">
+                <div key={index} className="flex justify-between items-center group py-2 border-b border-rose-50">
+                  <div className="flex items-center">
                     <div className="w-6 h-6 rounded-full bg-rose-100 flex items-center justify-center mr-3
                                  group-hover:bg-rose-200 transition-colors">
                       <Star className="w-4 h-4 text-rose-600" />
                     </div>
                     <span className="group-hover:text-rose-700 transition-colors">Bonus {index + 1}: {bonus.name}</span>
                   </div>
-                  <span className="font-semibold text-rose-600 ml-9 sm:ml-0">{bonus.price}</span>
+                  <span className="font-semibold text-rose-600">{bonus.price}</span>
                 </div>
               ))}
             </div>
-            
+
             {/* Total Value */}
             <div className="bg-rose-50 p-6 rounded-xl mb-6">
               <div className="text-center">
-                <p className="font-semibold mb-3">Total Value: ₹12,738</p>
+                <p className="font-semibold mb-3 line-through decoration-rose-500 decoration-2">Total Value: ₹12,738</p>
                 <div className="mb-1">
                   <h3 className="text-2xl font-bold text-rose-600">Today's Price: ₹499 + GST</h3>
                   <p className="text-sm text-rose-500">96% Discount - Limited Time Offer!</p>
                 </div>
               </div>
             </div>
-            
+
             {/* CTA Button */}
             <a href="https://pages.razorpay.com/magicsnap" className="w-full py-4 bg-rose-600 hover:bg-rose-500 text-white rounded-xl font-bold 
-                             shadow-lg shadow-rose-200/50 group transition-all duration-300 flex items-center justify-center">
-              <span>Click Here to Buy Magic Snap Method</span>
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                             shadow-lg shadow-rose-200/50 group transition-all duration-300 text-center">
+              Click Here to Buy Magic Snap Method
+              <ArrowRight className="ml-2 inline-block group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
-          
+
           {/* Footer Badges */}
           <div className="grid grid-cols-4 border-t border-rose-100">
             <div className="py-4 px-2 flex flex-col items-center justify-center text-center border-r border-rose-100">
@@ -169,6 +138,14 @@ export function Pricing() {
               <Check className="w-5 h-5 text-rose-500 mb-1" />
               <span className="text-xs text-gray-600">24/7 Support</span>
             </div>
+          </div>
+
+          {/* Parents enrolled - Moved to bottom */}
+          <div className="bg-rose-50/80 p-4 text-center">
+            <p className="text-sm text-rose-600 flex items-center justify-center gap-1">
+              <Star className="w-4 h-4" />
+              <span>3,247 parents already enrolled</span>
+            </p>
           </div>
         </div>
       </div>
