@@ -98,15 +98,15 @@ export function Pricing() {
             
             <div className="space-y-4 mb-8">
               {features.map((feature, index) => (
-                <div key={index} className="flex justify-between items-center group py-2 border-b border-rose-50">
-                  <div className="flex items-center">
+                <div key={index} className="flex flex-col sm:flex-row sm:justify-between group py-2 border-b border-rose-50">
+                  <div className="flex items-center mb-1 sm:mb-0">
                     <div className="w-6 h-6 rounded-full bg-rose-100 flex items-center justify-center mr-3 
                                  group-hover:bg-rose-200 transition-colors">
                       <Check className="w-4 h-4 text-rose-600" />
                     </div>
                     <span className="group-hover:text-rose-700 transition-colors">{feature.name}</span>
                   </div>
-                  <span className="font-semibold text-rose-600">Valued at {feature.price}</span>
+                  <span className="font-semibold text-rose-600 ml-9 sm:ml-0">{feature.price}</span>
                 </div>
               ))}
             </div>
@@ -119,15 +119,15 @@ export function Pricing() {
             
             <div className="space-y-4 mb-8">
               {bonuses.map((bonus, index) => (
-                <div key={index} className="flex justify-between items-center group py-2 border-b border-rose-50">
-                  <div className="flex items-center">
+                <div key={index} className="flex flex-col sm:flex-row sm:justify-between group py-2 border-b border-rose-50">
+                  <div className="flex items-center mb-1 sm:mb-0">
                     <div className="w-6 h-6 rounded-full bg-rose-100 flex items-center justify-center mr-3
                                  group-hover:bg-rose-200 transition-colors">
                       <Star className="w-4 h-4 text-rose-600" />
                     </div>
                     <span className="group-hover:text-rose-700 transition-colors">Bonus {index + 1}: {bonus.name}</span>
                   </div>
-                  <span className="font-semibold text-rose-600">Valued at {bonus.price}</span>
+                  <span className="font-semibold text-rose-600 ml-9 sm:ml-0">{bonus.price}</span>
                 </div>
               ))}
             </div>

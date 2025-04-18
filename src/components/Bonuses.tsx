@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Gift, FileText, Music, ArrowRight, Sparkles, Star } from 'lucide-react';
 
@@ -49,7 +48,7 @@ export function Bonuses() {
         <div className="block">
           <div className="absolute top-20 left-[10%] w-64 h-64 bg-rose-100 rounded-full filter blur-3xl opacity-30 animate-float"></div>
           <div className="absolute bottom-40 right-[5%] w-80 h-80 bg-rose-200 rounded-full filter blur-3xl opacity-20 animate-float-gentle"></div>
-          
+
           <Gift className="absolute top-20 left-[15%] w-8 h-8 text-rose-200 animate-float" />
           <Star className="absolute top-40 right-[20%] w-6 h-6 text-rose-200 animate-pulse" />
           <Music className="absolute bottom-32 left-[25%] w-7 h-7 text-rose-200 animate-float-gentle" />
@@ -65,17 +64,17 @@ export function Bonuses() {
             <Gift className="w-5 h-5 text-rose-500" />
             <span className="text-rose-700 font-semibold">Limited Time Offer</span>
           </div>
-          
+
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-8">
             Exclusive <span className="bg-gradient-to-r from-rose-500 to-rose-600 bg-clip-text text-transparent">Bonuses</span>
           </h2>
-          
+
           <p className="text-xl text-gray-700 leading-relaxed">
             For the next <span className="text-rose-600 font-semibold">10 people</span> who take action today, 
             we're offering these exclusive Fast Action Bonuses to enhance your photography journey.
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {bonuses.map((bonus, index) => (
             <div key={index} 
@@ -88,9 +87,8 @@ export function Bonuses() {
               <h3 className="text-xl font-bold mb-2 text-center group-hover:text-rose-600 transition-colors">
                 #{index + 1} {bonus.title}
               </h3>
-              <p className="text-rose-600 font-semibold text-center mb-4 flex items-center justify-center gap-1">
-                <Star className="w-4 h-4" />
-                <span>Valued at {bonus.value}</span>
+              <p className="text-rose-600 font-semibold text-center mb-4">
+                {bonus.value}
               </p>
               <div className="text-gray-600 text-sm">{bonus.description}</div>
             </div>
@@ -98,18 +96,13 @@ export function Bonuses() {
         </div>
 
         <div className="text-center mt-16">
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-rose-100 max-w-3xl mx-auto">
-            <p className="text-xl text-gray-700 mb-6">
-              That's a total value of <span className="text-rose-600 font-semibold">₹3,500</span> in free bonuses for your commitment today.
-            </p>
-            <p className="text-lg text-gray-700 mb-8">
-              Seize this opportunity to enhance your baby photography journey and create lasting memories!
-            </p>
-            <a href="https://pages.razorpay.com/magicsnap" className="btn-primary group">
-              <span>Claim Your Bonuses Now!</span>
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </a>
-          </div>
+          <a href="https://pages.razorpay.com/magicsnap" className="group bg-rose-600 hover:bg-rose-500 text-white px-8 py-4 rounded-full 
+                           text-lg font-medium inline-flex items-center gap-3 
+                           transform hover:scale-105 transition-all duration-300
+                           shadow-lg shadow-rose-200">
+            <span>Claim All Bonuses Now!</span>
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </a>
         </div>
       </div>
     </section>
