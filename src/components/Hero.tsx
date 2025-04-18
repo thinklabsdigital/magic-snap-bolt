@@ -15,7 +15,7 @@ export function Hero() {
         </div>
         
         {/* Floating elements */}
-        <div className="hidden md:block">
+        <div className="block">
           {/* Stars */}
           <Star className="absolute top-20 left-[20%] w-6 h-6 text-rose-300/20 animate-float" />
           <Star className="absolute top-40 right-[25%] w-4 h-4 text-rose-300/20 animate-float-gentle" />

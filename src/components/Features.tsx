@@ -44,7 +44,7 @@ export function Features() {
     <section className="py-20 bg-gradient-to-b from-rose-50 to-white relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="hidden md:block">
+        <div className="block">
           <Star className="absolute top-20 left-[10%] w-6 h-6 text-rose-200 animate-float" />
           <Heart className="absolute bottom-40 right-[15%] w-5 h-5 text-rose-200 animate-pulse" />
           <Sparkles className="absolute top-1/2 right-[20%] w-4 h-4 text-rose-200 animate-float-gentle" />

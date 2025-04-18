@@ -36,7 +36,7 @@ export function Questions() {
 
       {/* Animated background elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="hidden md:block">
+        <div className="block">
           {/* Top row */}
           <Camera className="absolute top-[10%] left-[15%] w-8 h-8 text-rose-500/30 animate-float" />
           <Aperture className="absolute top-[15%] right-[20%] w-6 h-6 text-rose-600/20 animate-spin-slow" />

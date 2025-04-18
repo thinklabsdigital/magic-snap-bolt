@@ -25,7 +25,7 @@ export function Vision() {
     <section className="py-20 bg-gradient-to-b from-white to-rose-50 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="hidden md:block">
+        <div className="block">
           <div className="absolute top-20 left-[10%] w-64 h-64 bg-rose-100 rounded-full filter blur-3xl opacity-30 animate-float"></div>
           <div className="absolute bottom-40 right-[5%] w-80 h-80 bg-rose-200 rounded-full filter blur-3xl opacity-20 animate-float-gentle"></div>
           
