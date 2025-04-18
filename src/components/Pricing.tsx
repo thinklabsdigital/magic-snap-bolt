@@ -144,7 +144,7 @@ export function Pricing() {
           <div className="bg-rose-50/80 p-4 text-center">
             <p className="text-sm text-rose-600 flex items-center justify-center gap-1">
               <Star className="w-4 h-4" />
-              <span>3,247 parents already enrolled</span>
+              <span>1,247 parents already enrolled</span>
             </p>
           </div>
         </div>
