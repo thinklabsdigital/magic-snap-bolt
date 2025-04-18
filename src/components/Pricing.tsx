@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { ArrowRight, Check } from 'lucide-react';
+import { ArrowRight, Check, Package, Tag, Sparkles, Star } from 'lucide-react';
 
 export function Pricing() {
   const features = [
@@ -20,51 +21,92 @@ export function Pricing() {
   ];
 
   return (
-    <section className="py-20 bg-purple-50">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Let's Recap!</h2>
+    <section className="py-20 bg-gradient-to-b from-white to-rose-50 relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="hidden md:block">
+          <div className="absolute top-20 left-[10%] w-64 h-64 bg-rose-100 rounded-full filter blur-3xl opacity-30 animate-float"></div>
+          <div className="absolute bottom-40 right-[5%] w-80 h-80 bg-rose-200 rounded-full filter blur-3xl opacity-20 animate-float-gentle"></div>
+          
+          <Package className="absolute top-20 left-[15%] w-8 h-8 text-rose-200 animate-float" />
+          <Star className="absolute top-40 right-[20%] w-6 h-6 text-rose-200 animate-pulse" />
+          <Tag className="absolute bottom-32 left-[25%] w-7 h-7 text-rose-200 animate-float-gentle" />
+          <Sparkles className="absolute bottom-40 right-[30%] w-6 h-6 text-rose-200 animate-float" />
+        </div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Section Header */}
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <div className="inline-flex items-center gap-2 bg-rose-500/10 backdrop-blur-sm rounded-full 
+                        px-6 py-3 mb-6 border border-rose-500/20">
+            <Package className="w-5 h-5 text-rose-500" />
+            <span className="text-rose-700 font-semibold">Value Breakdown</span>
+          </div>
+          
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-8">
+            Let's <span className="bg-gradient-to-r from-rose-500 to-rose-600 bg-clip-text text-transparent">Recap!</span>
+          </h2>
+        </div>
         
-        <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden">
-          <div className="p-8">
-            <div className="space-y-4">
-              {features.map((feature, index) => (
-                <div key={index} className="flex justify-between items-center">
-                  <div className="flex items-center">
-                    <Check className="w-5 h-5 text-green-500 mr-2" />
-                    <span>{feature.name}</span>
-                  </div>
-                  <span className="font-semibold">{feature.price}</span>
-                </div>
-              ))}
-              
-              <div className="border-t border-gray-200 pt-4 mt-4">
-                <h3 className="font-bold text-xl mb-4">BONUSES!</h3>
-                {bonuses.map((bonus, index) => (
-                  <div key={index} className="flex justify-between items-center mb-2">
+        <div className="max-w-2xl mx-auto">
+          <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-rose-100 
+                      transform hover:scale-[1.01] transition-all duration-300">
+            <div className="p-8">
+              <div className="space-y-4">
+                {features.map((feature, index) => (
+                  <div key={index} className="flex justify-between items-center group">
                     <div className="flex items-center">
-                      <Check className="w-5 h-5 text-purple-500 mr-2" />
-                      <span>{bonus.name}</span>
+                      <div className="w-6 h-6 rounded-full bg-rose-100 flex items-center justify-center mr-3 
+                                   group-hover:bg-rose-200 transition-colors">
+                        <Check className="w-4 h-4 text-rose-600" />
+                      </div>
+                      <span className="group-hover:text-rose-700 transition-colors">{feature.name}</span>
                     </div>
-                    <span className="font-semibold">{bonus.price}</span>
+                    <span className="font-semibold text-rose-600">{feature.price}</span>
                   </div>
                 ))}
+                
+                <div className="border-t border-rose-100 pt-6 mt-6">
+                  <h3 className="font-bold text-xl mb-4 flex items-center gap-2">
+                    <Sparkles className="w-5 h-5 text-rose-500" />
+                    <span>BONUSES!</span>
+                  </h3>
+                  {bonuses.map((bonus, index) => (
+                    <div key={index} className="flex justify-between items-center mb-3 group">
+                      <div className="flex items-center">
+                        <div className="w-6 h-6 rounded-full bg-rose-100 flex items-center justify-center mr-3
+                                     group-hover:bg-rose-200 transition-colors">
+                          <Star className="w-4 h-4 text-rose-600" />
+                        </div>
+                        <span className="group-hover:text-rose-700 transition-colors">{bonus.name}</span>
+                      </div>
+                      <span className="font-semibold text-rose-600">{bonus.price}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                <div className="border-t border-rose-100 pt-6 mt-6">
+                  <div className="flex justify-between items-center mb-4">
+                    <span className="font-bold text-lg">Total Bundle Value</span>
+                    <span className="font-bold text-lg">₹12,738</span>
+                  </div>
+                  <div className="flex justify-between items-center text-xl bg-rose-50 p-4 rounded-xl">
+                    <span className="font-bold text-rose-600">Today's Price</span>
+                    <div className="flex flex-col items-end">
+                      <span className="text-gray-500 line-through text-sm">₹12,738</span>
+                      <span className="font-bold text-rose-600">₹499 Only</span>
+                      <span className="text-xs text-rose-500 font-medium">96% Off</span>
+                    </div>
+                  </div>
+                </div>
               </div>
               
-              <div className="border-t border-gray-200 pt-4 mt-4">
-                <div className="flex justify-between items-center mb-2">
-                  <span className="font-bold">Total Bundle Value</span>
-                  <span className="font-bold">₹12,738</span>
-                </div>
-                <div className="flex justify-between items-center text-xl">
-                  <span className="font-bold text-purple-600">Today's Price</span>
-                  <span className="font-bold text-purple-600">₹499 Only (96% Off)</span>
-                </div>
-              </div>
+              <button className="w-full mt-8 btn-primary group">
+                <span>Get Started Now</span>
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </button>
             </div>
-            
-            <button className="w-full mt-8 bg-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-700 transition-colors inline-flex items-center justify-center">
-              Get Started Now <ArrowRight className="ml-2" />
-            </button>
           </div>
         </div>
       </div>
