@@ -31,7 +31,7 @@ function ValuePillar({ icon, title, description }) {
 
 export function About() {
   const stats = [
-    { icon: <Users className="w-5 h-5" />, value: "10K+", label: "Happy Parents" },
+    { icon: <Users className="w-5 h-5" />, value: "1K+", label: "Happy Parents" },
     { icon: <Clock className="w-5 h-5" />, value: "5+", label: "Years Experience" },
     { icon: <Camera className="w-5 h-5" />, value: "12K+", label: "Beautiful Photos" },
     { icon: <Award className="w-5 h-5" />, value: "96%", label: "Satisfaction Rate" }
