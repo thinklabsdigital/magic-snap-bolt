@@ -69,24 +69,46 @@ export function Vision() {
           </p>
         </div>
         
-        {/* Interactive Timeline Tabs */}
+        {/* Stacked Tabs - 2 on top, 1 on bottom */}
         <div className="max-w-5xl mx-auto mb-10">
-          <div className="flex justify-center mb-8 overflow-x-auto pb-2">
-            <div className="bg-white/80 backdrop-blur-sm rounded-full p-1 shadow-md inline-flex border border-rose-100">
-              {timeframes.map((item, index) => (
-                <button 
-                  key={index}
-                  onClick={() => setActiveTab(index)} 
-                  className={`relative px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 flex items-center gap-2 min-w-max
-                             ${activeTab === index 
-                               ? 'bg-rose-500 text-white shadow-lg shadow-rose-200/50' 
-                               : 'text-gray-600 hover:bg-rose-100/50'}`}
-                >
-                  <div className="w-6 h-6 flex-shrink-0">{item.icon}</div>
-                  <span>{item.period}</span>
-                </button>
-              ))}
-            </div>
+          <div className="grid grid-cols-2 sm:grid-cols-2 gap-4 mb-4">
+            {timeframes.slice(0, 2).map((item, index) => (
+              <button 
+                key={index}
+                onClick={() => setActiveTab(index)} 
+                className={`relative p-4 rounded-xl text-sm font-semibold transition-all duration-300 flex flex-col items-center gap-3
+                           ${activeTab === index 
+                             ? 'bg-rose-500 text-white shadow-lg shadow-rose-200/50' 
+                             : 'bg-white/80 text-gray-600 hover:bg-rose-100/50 border border-rose-100'}`}
+              >
+                <div className="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center shadow-md mb-2">
+                  <div className={`w-8 h-8 ${activeTab === index ? 'text-rose-600' : 'text-rose-400'}`}>
+                    {item.icon}
+                  </div>
+                </div>
+                <span className="text-center font-medium">{item.period}</span>
+              </button>
+            ))}
+          </div>
+          
+          <div className="mb-8">
+            {timeframes.slice(2).map((item, index) => (
+              <button 
+                key={index + 2}
+                onClick={() => setActiveTab(index + 2)} 
+                className={`relative p-4 rounded-xl text-sm font-semibold transition-all duration-300 flex flex-col items-center gap-3 w-full
+                           ${activeTab === index + 2
+                             ? 'bg-rose-500 text-white shadow-lg shadow-rose-200/50' 
+                             : 'bg-white/80 text-gray-600 hover:bg-rose-100/50 border border-rose-100'}`}
+              >
+                <div className="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center shadow-md mb-2">
+                  <div className={`w-8 h-8 ${activeTab === index + 2 ? 'text-rose-600' : 'text-rose-400'}`}>
+                    {item.icon}
+                  </div>
+                </div>
+                <span className="text-center font-medium">{item.period}</span>
+              </button>
+            ))}
           </div>
           
           {/* Content Display */}
@@ -135,56 +157,23 @@ export function Vision() {
                           </div>
                         ))}
                       </div>
+
+                      <div className="mt-8">
+                        <a 
+                          href="https://pages.razorpay.com/magicsnap"
+                          className="inline-block px-6 py-3 bg-rose-600 hover:bg-rose-500 text-white rounded-lg font-medium 
+                                   flex items-center gap-2 shadow-md shadow-rose-200/30
+                                   transform hover:translate-y-[-2px] transition-all"
+                        >
+                          <span>Start Your Journey</span>
+                          <ArrowRight className="w-4 h-4" />
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
-                
-                {/* Progress Bar */}
-                <div className="h-2 bg-rose-100">
-                  <div 
-                    className="h-full bg-rose-500 transition-all duration-500"
-                    style={{ width: `${(index + 1) * (100 / timeframes.length)}%` }}
-                  ></div>
-                </div>
               </div>
             ))}
-            
-            {/* Navigation Buttons */}
-            <div className="p-4 md:p-6 bg-rose-50/50 flex justify-between">
-              <button 
-                onClick={() => setActiveTab(prev => (prev > 0 ? prev - 1 : prev))}
-                className={`px-4 py-2 rounded-lg flex items-center gap-2 transition-all
-                           ${activeTab > 0 
-                             ? 'text-rose-600 hover:bg-rose-100' 
-                             : 'text-gray-400 cursor-not-allowed'}`}
-                disabled={activeTab === 0}
-              >
-                <ArrowRight className="w-4 h-4 rotate-180" />
-                <span>Previous</span>
-              </button>
-              
-              <a 
-                href="https://pages.razorpay.com/magicsnap"
-                className="px-6 py-2 bg-rose-600 hover:bg-rose-500 text-white rounded-lg font-medium 
-                         flex items-center gap-2 shadow-md shadow-rose-200/30
-                         transform hover:translate-y-[-2px] transition-all"
-              >
-                <span>Start Your Journey</span>
-                <ArrowRight className="w-4 h-4" />
-              </a>
-              
-              <button 
-                onClick={() => setActiveTab(prev => (prev < timeframes.length - 1 ? prev + 1 : prev))}
-                className={`px-4 py-2 rounded-lg flex items-center gap-2 transition-all
-                           ${activeTab < timeframes.length - 1 
-                             ? 'text-rose-600 hover:bg-rose-100' 
-                             : 'text-gray-400 cursor-not-allowed'}`}
-                disabled={activeTab === timeframes.length - 1}
-              >
-                <span>Next</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
           </div>
         </div>
       </div>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Hero } from './components/Hero';
 import { Features } from './components/Features';
@@ -27,6 +26,7 @@ function App() {
       <Pricing />
       <Bonuses />
       <Vision />
+      <FAQ />
       <PS />
       <Footer />
     </>
