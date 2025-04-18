@@ -7,25 +7,25 @@ function ComparisonCard({ title, items, icon, isPrimary = true }) {
   
   return (
     <div 
-      className={`relative overflow-hidden rounded-2xl p-8 lg:p-10 transition-all duration-500 
+      className={`relative overflow-hidden rounded-2xl p-6 lg:p-8 transition-all duration-500 h-full
                 ${isPrimary 
-                  ? 'bg-gradient-to-br from-rose-50 to-white border-2 border-rose-200 shadow-xl' 
-                  : 'bg-white/60 border border-rose-100/50 shadow-lg'}`}
+                  ? 'bg-gradient-to-br from-rose-50 to-white border-2 border-rose-200 shadow-xl transform hover:-translate-y-2' 
+                  : 'bg-white/60 border border-rose-100/50 shadow-lg transform hover:translate-y-2'}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Background particle effects */}
-      <div className={`absolute top-0 right-0 w-32 h-32 bg-rose-100 rounded-full filter blur-3xl opacity-20 
+      <div className={`absolute top-0 right-0 w-48 h-48 bg-rose-100 rounded-full filter blur-3xl opacity-20 
                     transition-all duration-700 ${isHovered ? 'scale-150' : 'scale-100'}`}></div>
       
       <div className="relative z-10">
-        <div className={`w-16 h-16 ${isPrimary ? 'bg-rose-100' : 'bg-gray-100'} rounded-2xl flex items-center justify-center mb-6`}>
+        <div className={`w-16 h-16 ${isPrimary ? 'bg-rose-100' : 'bg-gray-100'} rounded-full flex items-center justify-center mb-6 mx-auto transform transition-all duration-300 ${isHovered ? 'scale-110' : ''}`}>
           <div className={`${isPrimary ? 'text-rose-600' : 'text-gray-400'}`}>
             {icon}
           </div>
         </div>
         
-        <h3 className={`text-2xl font-bold mb-6 flex items-center gap-2
+        <h3 className={`text-2xl font-bold mb-6 flex items-center gap-2 justify-center
                       ${isPrimary ? 'text-rose-600' : 'text-gray-400'}`}>
           {isPrimary ? <CheckCircle2 className="w-6 h-6" /> : <XCircle className="w-6 h-6" />}
           {title}
@@ -40,9 +40,9 @@ function ComparisonCard({ title, items, icon, isPrimary = true }) {
                         ${isPrimary ? 'hover:bg-rose-50/80' : 'hover:bg-gray-50/80'}`}
             >
               {isPrimary ? (
-                <CheckCircle2 className="w-6 h-6 mr-3 flex-shrink-0 text-rose-500" />
+                <CheckCircle2 className={`w-6 h-6 mr-3 flex-shrink-0 text-rose-500 transition-transform duration-300 ${isHovered ? 'scale-110' : ''}`} />
               ) : (
-                <XCircle className="w-6 h-6 mr-3 flex-shrink-0 text-rose-300" />
+                <XCircle className={`w-6 h-6 mr-3 flex-shrink-0 text-rose-300 transition-transform duration-300 ${isHovered ? 'scale-110' : ''}`} />
               )}
               <p className={`${isPrimary ? 'text-gray-700' : 'text-gray-500 line-through decoration-rose-200'}`}>
                 {item}
@@ -52,11 +52,11 @@ function ComparisonCard({ title, items, icon, isPrimary = true }) {
         </div>
         
         {isPrimary && (
-          <div className="mt-8">
+          <div className="mt-8 text-center">
             <button className="group bg-rose-600 text-white px-6 py-3 rounded-full 
                              font-medium inline-flex items-center gap-2 
                              hover:bg-rose-500 transition-all duration-300
-                             shadow-lg shadow-rose-200/50">
+                             shadow-lg shadow-rose-200/50 transform hover:scale-105">
               Get Started
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
@@ -86,9 +86,12 @@ export function Comparison() {
     "Waste money on expensive lenses and lighting kits"
   ];
 
+  // Interactive elements
+  const [activeTab, setActiveTab] = useState('with');
+
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-rose-50 relative overflow-hidden">
-      {/* Animated shapes in background */}
+    <section className="py-20 bg-gradient-to-br from-white via-rose-50 to-white relative overflow-hidden">
+      {/* Enhanced animated shapes in background */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="hidden md:block">
           <div className="absolute top-20 left-[10%] w-64 h-64 bg-rose-100 rounded-full filter blur-3xl opacity-30 animate-float"></div>
@@ -103,26 +106,50 @@ export function Comparison() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
+        {/* Enhanced Section Header */}
+        <div className="max-w-3xl mx-auto text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-rose-500/10 backdrop-blur-sm rounded-full 
-                         px-6 py-3 mb-6 border border-rose-500/20">
+                         px-6 py-3 mb-6 border border-rose-500/20 animate-pulse-slow">
             <Sparkles className="w-5 h-5 text-rose-500" />
             <span className="text-rose-700 font-semibold">The Difference</span>
           </div>
           
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-8">
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
             Experience the <span className="bg-gradient-to-r from-rose-500 to-rose-600 bg-clip-text text-transparent">Transformation</span>
           </h2>
           
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-2xl mx-auto mb-8">
             See how MAGIC SNAP transforms your photography experience and helps you capture 
             precious moments that would otherwise be lost forever.
           </p>
+          
+          {/* Mobile Tab Switcher (visible only on small screens) */}
+          <div className="md:hidden bg-white/80 backdrop-blur-sm rounded-full p-1 shadow-inner flex mb-8 mx-auto max-w-xs border border-rose-100">
+            <button 
+              onClick={() => setActiveTab('with')}
+              className={`flex-1 py-2 px-4 rounded-full text-sm font-semibold transition-all ${
+                activeTab === 'with' 
+                  ? 'bg-rose-500 text-white shadow-lg' 
+                  : 'text-gray-500 hover:text-rose-500'
+              }`}
+            >
+              With MAGIC SNAP
+            </button>
+            <button 
+              onClick={() => setActiveTab('without')}
+              className={`flex-1 py-2 px-4 rounded-full text-sm font-semibold transition-all ${
+                activeTab === 'without' 
+                  ? 'bg-gray-500 text-white shadow-lg' 
+                  : 'text-gray-500 hover:text-gray-600'
+              }`}
+            >
+              Without MAGIC SNAP
+            </button>
+          </div>
         </div>
 
-        {/* Comparison cards with enhanced visual appeal */}
-        <div className="grid lg:grid-cols-2 gap-6 lg:gap-10 max-w-6xl mx-auto">
+        {/* Comparison cards with responsive layout - Side by side on desktop, tabbed on mobile */}
+        <div className="hidden md:grid md:grid-cols-2 gap-6 lg:gap-10 max-w-6xl mx-auto">
           <ComparisonCard 
             title="With MAGIC SNAP" 
             items={withItems}
@@ -130,28 +157,47 @@ export function Comparison() {
           />
           
           <ComparisonCard 
-            title="Without Magic Snap" 
+            title="Without MAGIC SNAP" 
             items={withoutItems}
             icon={<Camera className="w-8 h-8" />}
             isPrimary={false}
           />
         </div>
         
-        {/* Benefits highlight */}
-        <div className="max-w-4xl mx-auto mt-16 text-center bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-rose-100 shadow-xl">
+        {/* Mobile view - tabbed content */}
+        <div className="md:hidden max-w-md mx-auto">
+          {activeTab === 'with' ? (
+            <ComparisonCard 
+              title="With MAGIC SNAP" 
+              items={withItems}
+              icon={<Camera className="w-8 h-8" />}
+            />
+          ) : (
+            <ComparisonCard 
+              title="Without MAGIC SNAP" 
+              items={withoutItems}
+              icon={<Camera className="w-8 h-8" />}
+              isPrimary={false}
+            />
+          )}
+        </div>
+        
+        {/* Enhanced Benefits highlight */}
+        <div className="max-w-4xl mx-auto mt-16 text-center bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-rose-100 shadow-xl transform transition-all duration-500 hover:shadow-2xl">
           <h3 className="text-2xl font-bold text-gray-900 mb-4">
             Join <span className="text-rose-600">thousands of parents</span> who are capturing childhood's most precious moments!
           </h3>
-          <p className="text-gray-600 mb-6">
+          <p className="text-gray-600 mb-6 max-w-xl mx-auto">
             Don't let another magical moment slip by uncaptured. Transform your phone into a professional 
             camera with our easy-to-follow techniques.
           </p>
-          <button className="group bg-rose-600 hover:bg-rose-500 text-white px-8 py-4 rounded-full 
+          <button className="group bg-gradient-to-r from-rose-500 to-rose-600 hover:from-rose-600 hover:to-rose-500 text-white px-8 py-4 rounded-full 
                            text-lg font-medium inline-flex items-center gap-3 
                            transform hover:scale-105 transition-all duration-300
-                           shadow-lg shadow-rose-200">
-            Start Your Photography Journey
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                           shadow-lg shadow-rose-200 relative overflow-hidden">
+            <span className="relative z-10">Start Your Photography Journey</span>
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" />
+            <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
           </button>
         </div>
       </div>

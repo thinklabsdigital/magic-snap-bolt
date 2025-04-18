@@ -15,6 +15,20 @@
     @apply text-3xl md:text-4xl font-bold text-gray-900 mb-8;
   }
 
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+
   .feature-card {
     @apply bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300;
   }
