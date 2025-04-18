@@ -6,19 +6,19 @@ export function Bonuses() {
     {
       icon: <FileText className="w-6 h-6" />,
       title: "Magic Snap Essentials Kit",
-      description: "Get instant access to our complete library of cheat sheets, templates, and reference guides that make implementing the Magic Snap techniques incredibly easy. These ready-to-use resources help you remember key concepts and apply them immediately.",
+      description: "This collection includes recommended accessories—both premium and budget-friendly (under Rs 1,000)—that will elevate your photography game. From lens attachments to stabilizers, these tools are designed to help you capture stunning images of your little one, making every moment picture-perfect.",
       value: "₹1,499"
     },
     {
       icon: <Star className="w-6 h-6" />,
       title: "Light Like a Pro - Cheatsheet",
-      description: "Unlock the secrets of perfect lighting with our comprehensive guide to working with natural light in any condition. This bonus includes diagrams, examples, and step-by-step instructions for achieving stunning lighting in challenging environments.",
+      description: "This resource is packed with essential tips that will guide you in setting up the perfect shot, no matter the environment. Whether you’re indoors or outdoors, this cheatsheet will help you create beautifully lit and composed images that truly showcase your baby’s personality.",
       value: "₹1,199"
     },
     {
       icon: <Music className="w-6 h-6" />,
       title: "Chottu Cheers - Spotify Playlists",
-      description: "Discover our curated collection of playlists scientifically designed to elicit genuine smiles and laughter from babies and toddlers. These age-appropriate tracks make photo sessions fun and help capture those precious authentic expressions.",
+      description: "These delightful tunes are tailored for photoshoots, ensuring your little one is in the best mood for capturing those adorable smiles and giggles. With the right music, every photoshoot becomes a joyful experience, making it easier to snap those cherished moments.",
       value: "₹999"
     }
   ];
@@ -47,14 +47,14 @@ export function Bonuses() {
           </div>
 
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-8 text-center">
-            Special <span className="bg-gradient-to-r from-rose-500 to-rose-600 bg-clip-text text-transparent">Bonuses</span>
+            Fast Action <span className="bg-gradient-to-r from-rose-500 to-rose-600 bg-clip-text text-transparent">Bonuses</span>
           </h2>
 
           {/* Fast Action Banner */}
-          <div className="bg-rose-50/80 backdrop-blur-sm rounded-full px-6 py-3 inline-flex items-center justify-center border border-rose-100 mb-6">
+          <div className="bg-rose-200/80 backdrop-blur-sm rounded-full px-6 py-3 inline-flex items-center justify-center border border-rose-100 mb-6">
             <Clock className="w-5 h-5 text-rose-600 mr-2" />
             <p className="text-rose-700 font-medium">
-              Exclusive bonuses for early action takers!
+              For the next 10 people who take action today!
             </p>
           </div>
         </div>
