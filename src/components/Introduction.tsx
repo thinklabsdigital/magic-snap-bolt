@@ -145,7 +145,7 @@ export function Introduction() {
                            text-lg font-medium inline-flex items-center gap-3 
                            transform hover:scale-105 transition-all duration-300
                            shadow-lg shadow-rose-200">
-            Start Creating Beautiful Memories
+            Transform The Way You Click Your Next Photo!
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </a>
         </div>
