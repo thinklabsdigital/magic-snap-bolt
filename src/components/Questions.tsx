@@ -77,21 +77,21 @@ export function Questions() {
               onClick={() => toggleQuestion(index)}
               className={`w-full text-left p-6 rounded-2xl transition-all duration-300 transform hover:scale-[1.01] cursor-pointer backdrop-blur-sm
                          ${checkedQuestions.includes(index)
-                           ? 'bg-white/90 border-2 border-rose-400/50 shadow-lg'
+                           ? 'bg-white/95 border-2 border-rose-500 shadow-lg'
                            : 'bg-white/70 border border-rose-200/70 hover:border-rose-300/80 shadow-md'}`}
             >
               <div className="flex items-start gap-4">
                 <div className={`flex-shrink-0 w-6 h-6 rounded-full border-2 transition-colors
                                 flex items-center justify-center
                                 ${checkedQuestions.includes(index)
-                                  ? 'border-rose-500 bg-rose-500'
+                                  ? 'border-rose-600 bg-rose-600 ring-2 ring-rose-200'
                                   : 'border-rose-300'}`}
                 >
                   {checkedQuestions.includes(index) && (
-                    <Check className="w-4 h-4 text-white" />
+                    <Check className="w-4 h-4 text-white animate-pulse-slow" />
                   )}
                 </div>
-                <p className={`text-lg ${checkedQuestions.includes(index) ? 'text-gray-900' : 'text-gray-700'}`}>
+                <p className={`text-lg ${checkedQuestions.includes(index) ? 'text-gray-900 font-medium' : 'text-gray-700'}`}>
                   {questionParts.map((part, i) => (
                     <span key={i} className={i % 2 === 1 ? 'text-rose-600 font-semibold' : ''}>
                       {part}
