@@ -27,11 +27,11 @@ export function Questions() {
   };
 
   return (
-    <section className="py-20 relative overflow-hidden bg-gradient-to-b from-rose-300 to-rose-400">
+    <section className="py-20 relative overflow-hidden bg-gradient-to-b from-indigo-300 to-purple-400">
       {/* Gradient overlays */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/80 via-rose-50/50 to-transparent"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-rose-100/50 via-white/30 to-transparent"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/80 via-indigo-50/50 to-transparent"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-purple-100/50 via-white/30 to-transparent"></div>
       </div>
 
       {/* Animated background elements */}
@@ -57,17 +57,17 @@ export function Questions() {
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-rose-500/10 backdrop-blur-sm rounded-full 
-                         px-6 py-3 mb-6 border border-rose-500/20">
-            <Camera className="w-5 h-5 text-rose-500" />
-            <span className="text-rose-700 font-medium">Let's Be Honest</span>
+          <div className="inline-flex items-center gap-2 bg-indigo-500/10 backdrop-blur-sm rounded-full 
+                         px-6 py-3 mb-6 border border-indigo-500/20">
+            <Camera className="w-5 h-5 text-indigo-500" />
+            <span className="text-indigo-700 font-medium">Let's Be Honest</span>
           </div>
           
           <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-6">
             Can you relate to these
-            <span className="bg-gradient-to-r from-rose-500 to-rose-600 bg-clip-text text-transparent"> feelings?</span>
+            <span className="bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent"> feelings?</span>
           </h2>
-          <p className="text-rose-600/90">Click on the questions that resonate with you</p>
+          <p className="text-indigo-600/90">Click on the questions that resonate with you</p>
         </div>
 
         <div className="space-y-4 max-w-3xl mx-auto">
@@ -77,15 +77,15 @@ export function Questions() {
               onClick={() => toggleQuestion(index)}
               className={`w-full text-left p-6 rounded-2xl transition-all duration-300 transform hover:scale-[1.01] cursor-pointer backdrop-blur-sm
                          ${checkedQuestions.includes(index)
-                           ? 'bg-white/80 border-2 border-rose-300 shadow-lg'
-                           : 'bg-white/50 border border-rose-200 hover:border-rose-300 shadow-md'}`}
+                           ? 'bg-white/80 border-2 border-indigo-300 shadow-lg'
+                           : 'bg-white/50 border border-indigo-200 hover:border-indigo-300 shadow-md'}`}
             >
               <div className="flex items-start gap-4">
                 <div className={`flex-shrink-0 w-6 h-6 rounded-full border-2 transition-colors
                                 flex items-center justify-center
                                 ${checkedQuestions.includes(index)
-                                  ? 'border-rose-500 bg-rose-500'
-                                  : 'border-rose-300'}`}
+                                  ? 'border-indigo-500 bg-indigo-500'
+                                  : 'border-indigo-300'}`}
                 >
                   {checkedQuestions.includes(index) && (
                     <Check className="w-4 h-4 text-white" />
@@ -93,7 +93,7 @@ export function Questions() {
                 </div>
                 <p className={`text-lg ${checkedQuestions.includes(index) ? 'text-gray-900' : 'text-gray-700'}`}>
                   {questionParts.map((part, i) => (
-                    <span key={i} className={i % 2 === 1 ? 'text-rose-600 font-semibold' : ''}>
+                    <span key={i} className={i % 2 === 1 ? 'text-indigo-600 font-semibold' : ''}>
                       {part}
                     </span>
                   ))}
@@ -104,9 +104,9 @@ export function Questions() {
         </div>
 
         <div className="mt-16 text-center max-w-3xl mx-auto">
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 border-2 border-rose-200 shadow-xl">
+          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 border-2 border-indigo-200 shadow-xl">
             <h3 className="text-2xl font-display font-bold text-gray-900 mb-4">
-              If you nodded "yes" to any of these questions... Then this is for <span className="text-rose-600 font-semibold">YOU!</span>
+              If you nodded "yes" to any of these questions... Then this is for <span className="text-indigo-600 font-semibold">YOU!</span>
             </h3>
             
           </div>
