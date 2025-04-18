@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Hero } from './components/Hero';
 import { Features } from './components/Features';
 import { Comparison } from './components/Comparison';
@@ -12,8 +13,11 @@ import { Vision } from './components/Vision';
 import { About } from './components/About';
 import { Footer } from './components/Footer';
 import { PS } from './components/PS';
+import { PrivacyPolicy } from './components/PrivacyPolicy';
+import { TermsOfService } from './components/TermsOfService';
+import { RefundPolicy } from './components/RefundPolicy';
 
-function App() {
+function HomePage() {
   return (
     <>
       <Hero />
@@ -30,6 +34,19 @@ function App() {
       <PS />
       <Footer />
     </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/privacy-policy" element={<><PrivacyPolicy /><Footer /></>} />
+        <Route path="/terms-of-service" element={<><TermsOfService /><Footer /></>} />
+        <Route path="/refund-policy" element={<><RefundPolicy /><Footer /></>} />
+      </Routes>
+    </Router>
   );
 }
 
