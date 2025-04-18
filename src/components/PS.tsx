@@ -14,11 +14,11 @@ export function PS() {
           {/* Content */}
           <div className="p-8 md:p-10 text-center">
             <h2 className="text-3xl font-display font-bold text-rose-600 mb-6">
-              Don't let another precious moment slip away!
+              PS: Don't let another precious moment slip away!
             </h2>
 
             <p className="text-lg text-gray-700 mb-8">
-              Start capturing stunning memories today—your journey to beautiful photography begins now!
+              Start capturing those fleeting moments an turn them into memories that lasts forever—your journey to beautiful photography begins now!
             </p>
 
             {/* Final CTA */}
