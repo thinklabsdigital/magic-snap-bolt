@@ -134,13 +134,12 @@ export function About() {
         {/* Brand Logo */}
         <div className="flex justify-center mb-8">
           <div className="relative">
-            <div className="w-28 h-28 bg-white rounded-full shadow-xl flex items-center justify-center border-4 border-rose-100">
-              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-rose-400 to-rose-600 flex items-center justify-center">
-                <Camera className="w-12 h-12 text-white" />
-              </div>
-            </div>
-            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-white px-4 py-1 rounded-full border border-rose-100 shadow-md">
-              <span className="font-display font-bold text-rose-600">SnuggleShots</span>
+            <div className="w-32 h-32 bg-white rounded-full shadow-xl flex items-center justify-center border-4 border-rose-100 overflow-hidden">
+              <img 
+                src="https://ik.imagekit.io/u8qjiw2p1/Magic%20snap/Snuggleshots%20logo.png" 
+                alt="SnuggleShots Logo" 
+                className="w-28 h-28 object-contain"
+              />
             </div>
           </div>
         </div>
