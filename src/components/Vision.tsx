@@ -15,7 +15,7 @@ export function Vision() {
         "Create beautiful portraits in natural light",
         "Capture genuine expressions every time"
       ],
-      image: "https://ik.imagekit.io/u8qjiw2p1/Magic%20snap/freepik__the-style-is-candid-image-photography-with-natural__21291.png?auto=format&fit=crop&q=80"
+      image: "https://ik.imagekit.io/u8qjiw2p1/Magic%20snap/freepik__the-style-is-candid-image-photography-with-natural__214.jpeg?auto=format&fit=crop&q=80"
     },
     {
       icon: <Calendar className="text-rose-500" />,
@@ -26,7 +26,7 @@ export function Vision() {
         "Create frame-worthy images for your home",
         "Confidently photograph in any lighting condition"
       ],
-      image: "https://ik.imagekit.io/u8qjiw2p1/Magic%20snap/freepik__the-style-is-candid-image-photography-with-natural__11403.png?auto=format&fit=crop&q=80"
+      image: "https://ik.imagekit.io/u8qjiw2p1/Magic%20snap/freepik__an-indian-woman-28-years-old-blue-hair-smiling-and__23852.jpeg?auto=format&fit=crop&q=80"
     },
     {
       icon: <CalendarClock className="text-rose-500" />,
@@ -37,7 +37,7 @@ export function Vision() {
         "Document your child's growth journey beautifully",
         "Share impressive photos that amaze friends and family"
       ],
-      image: "https://ik.imagekit.io/u8qjiw2p1/Magic%20snap/freepik__the-style-is-candid-image-photography-with-natural__21283.png?auto=format&fit=crop&q=80"
+      image: "https://ik.imagekit.io/u8qjiw2p1/Magic%20snap/aHR0cHM6Ly90b2dldGhlci1haS1iZmwtaW1hZ2VzLXByb2QuczMudXMtd2VzdC0yLmFtYXpvbmF3cy5jb20vaW1hZ2VzLzU4MTg5N2UyZmRlZmViYmZhZDBmOWViNmQyNmE2ZTRlZjRlMjdlY2MyMjRmOGI3MjhlOGE2ZDI3NzQzZmZiOGM_WC1BbXotQWxnb3J.webp?auto=format&fit=crop&q=80"
     }
   ];
 
