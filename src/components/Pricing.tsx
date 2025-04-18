@@ -26,7 +26,13 @@ export function Pricing() {
   const seconds = 59;
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-rose-50 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-b from-rose-100 to-rose-200 relative overflow-hidden">
+      {/* Gradient overlays */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/90 via-rose-50/40 to-transparent"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-rose-50/60 via-white/40 to-transparent"></div>
+      </div>
+
       {/* Animated background elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="block">
