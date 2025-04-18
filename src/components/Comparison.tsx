@@ -182,14 +182,14 @@ export function Comparison() {
             Join <span className="text-rose-600">1000s of parents</span> who are capturing childhood's most precious moments!
           </h3>
 
-          <button className="group bg-gradient-to-r from-rose-500 to-rose-600 hover:from-rose-600 hover:to-rose-500 text-white px-8 py-4 rounded-full 
+          <a href="https://pages.razorpay.com/magicsnap" className="group bg-gradient-to-r from-rose-500 to-rose-600 hover:from-rose-600 hover:to-rose-500 text-white px-8 py-4 rounded-full 
                            text-lg font-medium inline-flex items-center gap-3 
                            transform hover:scale-105 transition-all duration-300
                            shadow-lg shadow-rose-200 relative overflow-hidden">
             <span className="relative z-10">Start Your Photography Journey Today!</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" />
             <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-          </button>
+          </a>
         </div>
       </div>
     </section>

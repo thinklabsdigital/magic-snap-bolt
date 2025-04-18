@@ -106,7 +106,7 @@ export function Pricing() {
               <div className="text-center">
                 <p className="font-semibold mb-3 line-through decoration-rose-500 decoration-2">Total Value: ₹12,738</p>
                 <div className="mb-1">
-                  <h3 className="text-2xl font-bold text-rose-600">Today's Price: ₹499 + GST</h3>
+                  <h3 className="text-2xl font-bold text-rose-600">Today's Price: ₹499</h3>
                   <p className="text-sm text-rose-500">96% Discount - Limited Time Offer!</p>
                 </div>
               </div>
