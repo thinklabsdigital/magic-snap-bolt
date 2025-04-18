@@ -95,36 +95,36 @@ export function Package() {
   ];
 
   return (
-    <section className="py-20 relative overflow-hidden bg-gradient-to-b from-indigo-300 to-purple-400">
+    <section className="py-20 relative overflow-hidden bg-gradient-to-b from-rose-300 to-rose-400">
       {/* Gradient overlays */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/80 via-indigo-50/50 to-transparent"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-purple-100/50 via-white/30 to-transparent"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/80 via-rose-50/50 to-transparent"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-rose-100/50 via-white/30 to-transparent"></div>
       </div>
 
       {/* Animated background elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="hidden md:block">
-          <Camera className="absolute top-20 left-[15%] w-8 h-8 text-indigo-400/40 animate-float" />
-          <Star className="absolute top-40 right-[20%] w-6 h-6 text-purple-400/40 animate-pulse" />
-          <Image className="absolute bottom-32 left-[25%] w-7 h-7 text-indigo-400/40 animate-float-gentle" />
-          <Heart className="absolute top-1/3 right-[15%] w-8 h-8 text-purple-400/40 animate-pulse" />
-          <Sparkles className="absolute bottom-40 right-[30%] w-6 h-6 text-indigo-400/40 animate-float" />
+          <Camera className="absolute top-20 left-[15%] w-8 h-8 text-rose-400/40 animate-float" />
+          <Star className="absolute top-40 right-[20%] w-6 h-6 text-rose-400/40 animate-pulse" />
+          <Image className="absolute bottom-32 left-[25%] w-7 h-7 text-rose-400/40 animate-float-gentle" />
+          <Heart className="absolute top-1/3 right-[15%] w-8 h-8 text-rose-400/40 animate-pulse" />
+          <Sparkles className="absolute bottom-40 right-[30%] w-6 h-6 text-rose-400/40 animate-float" />
         </div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-indigo-500/10 backdrop-blur-sm rounded-full 
-                         px-6 py-3 mb-6 border border-indigo-500/20">
-            <Sparkles className="w-5 h-5 text-indigo-500" />
-            <span className="text-indigo-700 font-medium">What's Inside</span>
+          <div className="inline-flex items-center gap-2 bg-rose-500/10 backdrop-blur-sm rounded-full 
+                         px-6 py-3 mb-6 border border-rose-500/20">
+            <Sparkles className="w-5 h-5 text-rose-500" />
+            <span className="text-rose-700 font-medium">What's Inside</span>
           </div>
           
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
             Here's What You Get Inside
-            <span className="bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent"> MAGIC SNAP ✨</span>
+            <span className="bg-gradient-to-r from-rose-500 to-rose-600 bg-clip-text text-transparent"> MAGIC SNAP ✨</span>
           </h2>
         </div>
 
@@ -133,23 +133,23 @@ export function Package() {
             <div
               key={index}
               className={`bg-white/80 backdrop-blur-sm rounded-2xl border transition-all duration-300 transform hover:scale-[1.01]
-                         ${expandedFeature === index ? 'border-indigo-300 shadow-lg' : 'border-indigo-200 shadow-md hover:border-indigo-300'}`}
+                         ${expandedFeature === index ? 'border-rose-300 shadow-lg' : 'border-rose-200 shadow-md hover:border-rose-300'}`}
             >
               <button
                 onClick={() => setExpandedFeature(expandedFeature === index ? null : index)}
                 className="w-full text-left p-6"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-indigo-50 rounded-full flex items-center justify-center flex-shrink-0">
-                    <div className="text-indigo-600">{feature.icon}</div>
+                  <div className="w-12 h-12 bg-rose-50 rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="text-rose-600">{feature.icon}</div>
                   </div>
                   <div className="flex-1">
                     <div className="flex justify-between items-center">
                       <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
                       {expandedFeature === index ? (
-                        <ChevronUp className="w-5 h-5 text-indigo-500" />
+                        <ChevronUp className="w-5 h-5 text-rose-500" />
                       ) : (
-                        <ChevronDown className="w-5 h-5 text-indigo-400" />
+                        <ChevronDown className="w-5 h-5 text-rose-400" />
                       )}
                     </div>
                   </div>
@@ -158,12 +158,12 @@ export function Package() {
               
               {/* Expandable Content */}
               {expandedFeature === index && (
-                <div className="px-6 pb-6 border-t border-indigo-100">
+                <div className="px-6 pb-6 border-t border-rose-100">
                   <div className="pt-4 mb-4 text-gray-600">{feature.description}</div>
                   <ul className="space-y-3">
                     {feature.details.map((detail, i) => (
                       <li key={i} className="flex items-center gap-3">
-                        <div className="w-2 h-2 rounded-full bg-indigo-400 flex-shrink-0"></div>
+                        <div className="w-2 h-2 rounded-full bg-rose-400 flex-shrink-0"></div>
                         <span className="text-gray-700">{detail}</span>
                       </li>
                     ))}
@@ -175,8 +175,8 @@ export function Package() {
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-indigo-600 text-white px-8 py-4 rounded-full text-lg font-semibold 
-                           hover:bg-indigo-500 transition-colors inline-flex items-center gap-2
+          <button className="bg-rose-600 text-white px-8 py-4 rounded-full text-lg font-semibold 
+                           hover:bg-rose-500 transition-colors inline-flex items-center gap-2
                            transform hover:scale-105 duration-300 shadow-lg">
             Create Your Baby's Visual Story
             <ChevronDown className="w-5 h-5 animate-bounce" />
