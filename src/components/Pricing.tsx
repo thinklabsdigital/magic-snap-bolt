@@ -113,11 +113,13 @@ export function Pricing() {
             </div>
 
             {/* CTA Button */}
-            <a href="https://pages.razorpay.com/magicsnap" className="w-full py-4 bg-rose-600 hover:bg-rose-500 text-white rounded-xl font-bold 
+            <div className="flex justify-center w-full">
+              <a href="https://pages.razorpay.com/magicsnap" className="py-4 px-8 bg-rose-600 hover:bg-rose-500 text-white rounded-xl font-bold 
                              shadow-lg shadow-rose-200/50 group transition-all duration-300 flex items-center justify-center">
-              Click Here to Buy Magic Snap Method
-              <ArrowRight className="ml-2 inline-block group-hover:translate-x-1 transition-transform" />
-            </a>
+                Click Here to Buy Magic Snap Method
+                <ArrowRight className="ml-2 inline-block group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
           </div>
 
           {/* Footer Badges */}

@@ -62,9 +62,9 @@ export function Bonuses() {
         {/* Bonus Cards in Modern Design */}
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {bonuses.map((bonus, index) => (
-            <div key={index} className="bg-white rounded-2xl shadow-xl overflow-hidden border border-rose-100 
+            <div key={index} className="bg-gray-50 rounded-2xl shadow-xl overflow-hidden border border-rose-100 
                                         hover:shadow-rose-100 transform hover:translate-y-[-8px] transition-all duration-300">
-              <div className="w-full bg-rose-50 flex items-center justify-center p-6">
+              <div className="w-full bg-rose-100 flex items-center justify-center p-6">
                 <div className="w-14 h-14 bg-white/80 rounded-full flex items-center justify-center shadow-md">
                   <div className="text-rose-600">{bonus.icon}</div>
                 </div>
