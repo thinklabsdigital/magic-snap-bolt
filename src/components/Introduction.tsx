@@ -144,9 +144,9 @@ export function Introduction() {
           <a href="https://pages.razorpay.com/magicsnap" className="group bg-rose-600 hover:bg-rose-500 text-white px-8 py-4 rounded-full 
                            text-lg font-medium inline-flex items-center gap-3 
                            transform hover:scale-105 transition-all duration-300
-                           shadow-lg shadow-rose-200">
-            Transform The Way You Click Your Next Photo!
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                           shadow-lg shadow-rose-200 animate-pulse-slow relative overflow-hidden">
+            <span className="relative z-10">Transform The Way You Click Your Next Photo!</span>
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" />
           </a>
         </div>
       </div>
