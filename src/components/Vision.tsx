@@ -14,7 +14,8 @@ export function Vision() {
         "Master smartphone camera settings",
         "Create beautiful portraits in natural light",
         "Capture genuine expressions every time"
-      ]
+      ],
+      image: "https://ik.imagekit.io/u8qjiw2p1/Magic%20snap/freepik__the-style-is-candid-image-photography-with-natural__21291.png?auto=format&fit=crop&q=80"
     },
     {
       icon: <Calendar className="w-8 h-8 text-rose-500" />,
@@ -24,7 +25,8 @@ export function Vision() {
         "Build a stunning digital photo collection",
         "Create frame-worthy images for your home",
         "Confidently photograph in any lighting condition"
-      ]
+      ],
+      image: "https://ik.imagekit.io/u8qjiw2p1/Magic%20snap/freepik__the-style-is-candid-image-photography-with-natural__11403.png?auto=format&fit=crop&q=80"
     },
     {
       icon: <CalendarClock className="w-8 h-8 text-rose-500" />,
@@ -34,7 +36,8 @@ export function Vision() {
         "Create professional-quality photo albums",
         "Document your child's growth journey beautifully",
         "Share impressive photos that amaze friends and family"
-      ]
+      ],
+      image: "https://ik.imagekit.io/u8qjiw2p1/Magic%20snap/freepik__the-style-is-candid-image-photography-with-natural__21283.png?auto=format&fit=crop&q=80"
     }
   ];
 
@@ -69,20 +72,20 @@ export function Vision() {
           </p>
         </div>
         
-        {/* Stacked Tabs - 2 on top, 1 on bottom */}
-        <div className="max-w-5xl mx-auto mb-10">
-          <div className="grid grid-cols-2 sm:grid-cols-2 gap-4 mb-4">
+        {/* Stacked Tabs - 2 on top, 1 on bottom - reduced size by 25% */}
+        <div className="max-w-4xl mx-auto mb-10">
+          <div className="grid grid-cols-2 sm:grid-cols-2 gap-3 mb-3">
             {timeframes.slice(0, 2).map((item, index) => (
               <button 
                 key={index}
                 onClick={() => setActiveTab(index)} 
-                className={`relative p-4 rounded-xl text-sm font-semibold transition-all duration-300 flex flex-col items-center gap-3
+                className={`relative p-3 rounded-xl text-xs font-semibold transition-all duration-300 flex flex-col items-center gap-2
                            ${activeTab === index 
                              ? 'bg-rose-500 text-white shadow-lg shadow-rose-200/50' 
                              : 'bg-white/80 text-gray-600 hover:bg-rose-100/50 border border-rose-100'}`}
               >
-                <div className="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center shadow-md mb-2">
-                  <div className={`w-8 h-8 ${activeTab === index ? 'text-rose-600' : 'text-rose-400'}`}>
+                <div className="w-10 h-10 rounded-full bg-white/90 flex items-center justify-center shadow-md mb-1">
+                  <div className={`w-6 h-6 ${activeTab === index ? 'text-rose-600' : 'text-rose-400'}`}>
                     {item.icon}
                   </div>
                 </div>
@@ -91,18 +94,18 @@ export function Vision() {
             ))}
           </div>
           
-          <div className="mb-8">
+          <div className="mb-6">
             {timeframes.slice(2).map((item, index) => (
               <button 
                 key={index + 2}
                 onClick={() => setActiveTab(index + 2)} 
-                className={`relative p-4 rounded-xl text-sm font-semibold transition-all duration-300 flex flex-col items-center gap-3 w-full
+                className={`relative p-3 rounded-xl text-xs font-semibold transition-all duration-300 flex flex-col items-center gap-2 w-full
                            ${activeTab === index + 2
                              ? 'bg-rose-500 text-white shadow-lg shadow-rose-200/50' 
                              : 'bg-white/80 text-gray-600 hover:bg-rose-100/50 border border-rose-100'}`}
               >
-                <div className="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center shadow-md mb-2">
-                  <div className={`w-8 h-8 ${activeTab === index + 2 ? 'text-rose-600' : 'text-rose-400'}`}>
+                <div className="w-10 h-10 rounded-full bg-white/90 flex items-center justify-center shadow-md mb-1">
+                  <div className={`w-6 h-6 ${activeTab === index + 2 ? 'text-rose-600' : 'text-rose-400'}`}>
                     {item.icon}
                   </div>
                 </div>
@@ -121,14 +124,19 @@ export function Vision() {
               >
                 <div className="p-8 md:p-12">
                   <div className="flex flex-col md:flex-row gap-8 items-center">
-                    {/* Left Side - Visual */}
+                    {/* Left Side - Visual with Image */}
                     <div className="md:w-2/5 flex justify-center">
                       <div className="relative">
-                        <div className="absolute inset-0 bg-rose-100 rounded-full w-40 h-40 filter blur-xl opacity-50"></div>
-                        <div className="relative bg-gradient-to-br from-rose-400 to-rose-600 rounded-full w-32 h-32 flex items-center justify-center shadow-lg">
-                          {item.icon}
+                        <div className="absolute inset-0 bg-rose-100 rounded-2xl w-48 h-48 filter blur-xl opacity-50"></div>
+                        <div className="relative w-40 h-40 rounded-2xl overflow-hidden shadow-lg">
+                          <img 
+                            src={item.image} 
+                            alt={`Vision: ${item.period}`}
+                            className="w-full h-full object-cover"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-rose-500/30 to-transparent"></div>
                         </div>
-                        <div className="absolute bottom-0 right-0 bg-white rounded-full p-2 shadow-md border border-rose-200">
+                        <div className="absolute -bottom-2 -right-2 bg-white rounded-full p-2 shadow-md border border-rose-200">
                           <Camera className="w-6 h-6 text-rose-500" />
                         </div>
                       </div>

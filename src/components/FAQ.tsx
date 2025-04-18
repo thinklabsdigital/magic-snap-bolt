@@ -29,6 +29,14 @@ export function FAQ() {
     {
       question: "What is your refund policy?",
       answer: "We allow you to request a refund after using the product for at least 30 days. To qualify, you must document your experience by submitting progress videos that showcase your efforts during this trial period. Contact our support team at hi.snuggleshots@gmail.com"
+    },
+    {
+      question: "How can I capture genuine smiles and expressions?",
+      answer: "Capturing those adorable, candid moments is all about patience and connection. We share techniques to engage your baby, encouraging those genuine smiles and delightful expressions. From playful interactions to using toys, you'll learn how to create an environment that brings out your baby's personality."
+    },
+    {
+      question: "What editing tools do I need to enhance my photos?",
+      answer: "You don't need fancy software to edit your photos! Our guide introduces you to user-friendly smartphone editing apps that will help you enhance your images while maintaining a natural look. You'll learn basic editing techniques that can transform your photos into stunning keepsakes without losing their authenticity."
     }
   ];
 
