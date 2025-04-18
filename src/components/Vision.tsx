@@ -7,7 +7,7 @@ export function Vision() {
   
   const timeframes = [
     {
-      icon: <CalendarDays className="w-8 h-8 text-rose-500" />,
+      icon: <CalendarDays className="text-rose-500" />,
       period: "One Month From Now",
       description: "You'll be effortlessly capturing your child's radiant smiles and playful moments, each photo a vivid reflection of their personality. No more blurry images or missed opportunities—just stunning snapshots that make your heart swell with joy.",
       benefits: [
@@ -18,7 +18,7 @@ export function Vision() {
       image: "https://ik.imagekit.io/u8qjiw2p1/Magic%20snap/freepik__the-style-is-candid-image-photography-with-natural__21291.png?auto=format&fit=crop&q=80"
     },
     {
-      icon: <Calendar className="w-8 h-8 text-rose-500" />,
+      icon: <Calendar className="text-rose-500" />,
       period: "Three Months From Now",
       description: "Your smartphone will be filled with a beautiful collection of memories. You'll have mastered the art of natural lighting and composition, transforming ordinary moments into extraordinary keepsakes.",
       benefits: [
@@ -29,7 +29,7 @@ export function Vision() {
       image: "https://ik.imagekit.io/u8qjiw2p1/Magic%20snap/freepik__the-style-is-candid-image-photography-with-natural__11403.png?auto=format&fit=crop&q=80"
     },
     {
-      icon: <CalendarClock className="w-8 h-8 text-rose-500" />,
+      icon: <CalendarClock className="text-rose-500" />,
       period: "Six Months From Now",
       description: "Your family photo album will be a treasure trove of memories, each image telling a story of laughter, love, and milestones. You'll have developed a passion for photography that connects you even more deeply with your child.",
       benefits: [
@@ -85,9 +85,9 @@ export function Vision() {
                              : 'bg-white/80 text-gray-600 hover:bg-rose-100/50 border border-rose-100'}`}
               >
                 <div className="w-8 h-8 rounded-full bg-white/90 flex items-center justify-center shadow-md mb-1">
-                  <div className={`w-4 h-4 ${activeTab === index ? 'text-rose-600' : 'text-rose-400'}`}>
-                    {item.icon}
-                  </div>
+                  <span className={`${activeTab === index ? 'text-rose-600' : 'text-rose-400'}`}>
+                    {React.cloneElement(item.icon, { className: 'w-4 h-4' })}
+                  </span>
                 </div>
                 <span className="text-center font-medium text-xs">{item.period}</span>
               </button>
@@ -105,9 +105,9 @@ export function Vision() {
                              : 'bg-white/80 text-gray-600 hover:bg-rose-100/50 border border-rose-100'}`}
               >
                 <div className="w-8 h-8 rounded-full bg-white/90 flex items-center justify-center shadow-md mb-1">
-                  <div className={`w-4 h-4 ${activeTab === index + 2 ? 'text-rose-600' : 'text-rose-400'}`}>
-                    {item.icon}
-                  </div>
+                  <span className={`${activeTab === index + 2 ? 'text-rose-600' : 'text-rose-400'}`}>
+                    {React.cloneElement(item.icon, { className: 'w-4 h-4' })}
+                  </span>
                 </div>
                 <span className="text-center font-medium text-xs">{item.period}</span>
               </button>
