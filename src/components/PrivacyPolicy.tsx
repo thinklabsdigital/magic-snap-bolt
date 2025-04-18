@@ -23,11 +23,11 @@ export function PrivacyPolicy() {
         <div className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-xl border border-rose-100 overflow-hidden p-8 md:p-12">
           <div className="flex justify-center mb-8">
             <div className="relative">
-              <div className="w-32 h-32 bg-white rounded-full shadow-xl flex items-center justify-center border-4 border-rose-100 overflow-hidden">
+              <div className="w-40 h-36 bg-white rounded-2xl shadow-xl flex items-center justify-center border-4 border-rose-100 overflow-hidden">
                 <img 
                   src="https://ik.imagekit.io/u8qjiw2p1/Magic%20snap/Snuggleshots%20logo.png" 
                   alt="SnuggleShots Logo" 
-                  className="w-28 h-28 object-contain"
+                  className="w-32 h-32 object-contain"
                 />
               </div>
             </div>
