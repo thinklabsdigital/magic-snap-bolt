@@ -27,30 +27,30 @@ export function Questions() {
   };
 
   return (
-    <section className="py-20 relative overflow-hidden bg-gradient-to-b from-rose-300 to-rose-400">
+    <section className="py-20 relative overflow-hidden bg-gradient-to-b from-rose-100 to-rose-200">
       {/* Gradient overlays */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/80 via-rose-50/50 to-transparent"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-rose-100/50 via-white/30 to-transparent"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/90 via-rose-50/40 to-transparent"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-rose-50/60 via-white/40 to-transparent"></div>
       </div>
 
       {/* Animated background elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="hidden md:block">
           {/* Top row */}
-          <Camera className="absolute top-[10%] left-[15%] w-8 h-8 text-rose-400/40 animate-float" />
-          <Aperture className="absolute top-[15%] right-[20%] w-6 h-6 text-rose-500/30 animate-spin-slow" />
-          <Star className="absolute top-[25%] left-[40%] w-5 h-5 text-rose-400/40 animate-pulse" />
+          <Camera className="absolute top-[10%] left-[15%] w-8 h-8 text-rose-500/30 animate-float" />
+          <Aperture className="absolute top-[15%] right-[20%] w-6 h-6 text-rose-600/20 animate-spin-slow" />
+          <Star className="absolute top-[25%] left-[40%] w-5 h-5 text-rose-500/30 animate-pulse" />
           
           {/* Middle row */}
-          <Image className="absolute top-[45%] left-[10%] w-7 h-7 text-rose-500/30 animate-float-gentle" />
-          <Sun className="absolute top-[40%] right-[15%] w-8 h-8 text-rose-400/40 animate-pulse" />
-          <Sparkles className="absolute top-[60%] left-[25%] w-6 h-6 text-rose-500/30 animate-float" />
+          <Image className="absolute top-[45%] left-[10%] w-7 h-7 text-rose-600/20 animate-float-gentle" />
+          <Sun className="absolute top-[40%] right-[15%] w-8 h-8 text-rose-500/30 animate-pulse" />
+          <Sparkles className="absolute top-[60%] left-[25%] w-6 h-6 text-rose-600/20 animate-float" />
           
           {/* Bottom row */}
-          <Heart className="absolute bottom-[20%] right-[25%] w-7 h-7 text-rose-400/40 animate-float-gentle" />
-          <Camera className="absolute bottom-[15%] left-[35%] w-6 h-6 text-rose-500/30 animate-pulse" />
-          <Star className="absolute bottom-[10%] right-[10%] w-5 h-5 text-rose-400/40 animate-float" />
+          <Heart className="absolute bottom-[20%] right-[25%] w-7 h-7 text-rose-500/30 animate-float-gentle" />
+          <Camera className="absolute bottom-[15%] left-[35%] w-6 h-6 text-rose-600/20 animate-pulse" />
+          <Star className="absolute bottom-[10%] right-[10%] w-5 h-5 text-rose-500/30 animate-float" />
         </div>
       </div>
 
@@ -77,8 +77,8 @@ export function Questions() {
               onClick={() => toggleQuestion(index)}
               className={`w-full text-left p-6 rounded-2xl transition-all duration-300 transform hover:scale-[1.01] cursor-pointer backdrop-blur-sm
                          ${checkedQuestions.includes(index)
-                           ? 'bg-white/80 border-2 border-rose-300 shadow-lg'
-                           : 'bg-white/50 border border-rose-200 hover:border-rose-300 shadow-md'}`}
+                           ? 'bg-white/90 border-2 border-rose-400/50 shadow-lg'
+                           : 'bg-white/70 border border-rose-200/70 hover:border-rose-300/80 shadow-md'}`}
             >
               <div className="flex items-start gap-4">
                 <div className={`flex-shrink-0 w-6 h-6 rounded-full border-2 transition-colors
@@ -104,11 +104,11 @@ export function Questions() {
         </div>
 
         <div className="mt-16 text-center max-w-3xl mx-auto">
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 border-2 border-rose-200 shadow-xl">
+          <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 border border-rose-300/50 shadow-xl 
+                        hover:shadow-rose-100/50 transition-all duration-300 transform hover:scale-[1.01]">
             <h3 className="text-2xl font-display font-bold text-gray-900 mb-4">
               If you nodded "yes" to any of these questions... Then this is for <span className="text-rose-600 font-semibold">YOU!</span>
             </h3>
-            
           </div>
         </div>
       </div>
