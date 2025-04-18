@@ -79,17 +79,17 @@ export function Vision() {
               <button 
                 key={index}
                 onClick={() => setActiveTab(index)} 
-                className={`relative p-3 rounded-xl text-xs font-semibold transition-all duration-300 flex flex-col items-center gap-2
+                className={`relative p-2 rounded-xl text-xs font-semibold transition-all duration-300 flex flex-col items-center gap-1.5
                            ${activeTab === index 
                              ? 'bg-rose-500 text-white shadow-lg shadow-rose-200/50' 
                              : 'bg-white/80 text-gray-600 hover:bg-rose-100/50 border border-rose-100'}`}
               >
-                <div className="w-10 h-10 rounded-full bg-white/90 flex items-center justify-center shadow-md mb-1">
-                  <div className={`w-6 h-6 ${activeTab === index ? 'text-rose-600' : 'text-rose-400'}`}>
+                <div className="w-8 h-8 rounded-full bg-white/90 flex items-center justify-center shadow-md mb-1">
+                  <div className={`w-4 h-4 ${activeTab === index ? 'text-rose-600' : 'text-rose-400'}`}>
                     {item.icon}
                   </div>
                 </div>
-                <span className="text-center font-medium">{item.period}</span>
+                <span className="text-center font-medium text-xs">{item.period}</span>
               </button>
             ))}
           </div>
@@ -99,17 +99,17 @@ export function Vision() {
               <button 
                 key={index + 2}
                 onClick={() => setActiveTab(index + 2)} 
-                className={`relative p-3 rounded-xl text-xs font-semibold transition-all duration-300 flex flex-col items-center gap-2 w-full
+                className={`relative p-2 rounded-xl text-xs font-semibold transition-all duration-300 flex flex-col items-center gap-1.5 w-full
                            ${activeTab === index + 2
                              ? 'bg-rose-500 text-white shadow-lg shadow-rose-200/50' 
                              : 'bg-white/80 text-gray-600 hover:bg-rose-100/50 border border-rose-100'}`}
               >
-                <div className="w-10 h-10 rounded-full bg-white/90 flex items-center justify-center shadow-md mb-1">
-                  <div className={`w-6 h-6 ${activeTab === index + 2 ? 'text-rose-600' : 'text-rose-400'}`}>
+                <div className="w-8 h-8 rounded-full bg-white/90 flex items-center justify-center shadow-md mb-1">
+                  <div className={`w-4 h-4 ${activeTab === index + 2 ? 'text-rose-600' : 'text-rose-400'}`}>
                     {item.icon}
                   </div>
                 </div>
-                <span className="text-center font-medium">{item.period}</span>
+                <span className="text-center font-medium text-xs">{item.period}</span>
               </button>
             ))}
           </div>
@@ -127,8 +127,8 @@ export function Vision() {
                     {/* Left Side - Visual with Image */}
                     <div className="md:w-2/5 flex justify-center">
                       <div className="relative">
-                        <div className="absolute inset-0 bg-rose-100 rounded-2xl w-48 h-48 filter blur-xl opacity-50"></div>
-                        <div className="relative w-40 h-40 rounded-2xl overflow-hidden shadow-lg">
+                        <div className="absolute inset-0 bg-rose-100 rounded-2xl w-60 h-48 filter blur-xl opacity-50"></div>
+                        <div className="relative w-56 h-40 rounded-2xl overflow-hidden shadow-lg">
                           <img 
                             src={item.image} 
                             alt={`Vision: ${item.period}`}
@@ -136,8 +136,8 @@ export function Vision() {
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-rose-500/30 to-transparent"></div>
                         </div>
-                        <div className="absolute -bottom-2 -right-2 bg-white rounded-full p-2 shadow-md border border-rose-200">
-                          <Camera className="w-6 h-6 text-rose-500" />
+                        <div className="absolute -bottom-2 -right-2 bg-white rounded-full p-1.5 shadow-md border border-rose-200">
+                          <Camera className="w-4 h-4 text-rose-500" />
                         </div>
                       </div>
                     </div>
