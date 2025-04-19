@@ -6,25 +6,25 @@ export function Hero() {
     <section className="relative min-h-screen bg-gray-900 overflow-hidden">
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-rose-950/50 to-gray-900/50"></div>
-
+      
       {/* Animated background patterns */}
       <div className="absolute inset-0">
         {/* Main pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0 bg-curved-pattern animate-float-gentle"></div>
         </div>
-
+        
         {/* Floating elements */}
         <div className="block">
           {/* Stars */}
           <Star className="absolute top-20 left-[20%] w-6 h-6 text-rose-300/20 animate-float" />
           <Star className="absolute top-40 right-[25%] w-4 h-4 text-rose-300/20 animate-float-gentle" />
           <Star className="absolute bottom-32 left-[15%] w-5 h-5 text-rose-300/20 animate-pulse" />
-
+          
           {/* Hearts */}
           <Heart className="absolute top-32 right-[15%] w-5 h-5 text-rose-300/20 animate-float" />
           <Heart className="absolute bottom-40 right-[20%] w-4 h-4 text-rose-300/20 animate-pulse" />
-
+          
           {/* Sparkles */}
           <Sparkles className="absolute top-60 left-[30%] w-4 h-4 text-rose-300/20 animate-float-gentle" />
           <Sparkles className="absolute bottom-20 right-[30%] w-6 h-6 text-rose-300/20 animate-float" />
@@ -42,14 +42,11 @@ export function Hero() {
                 <span className="text-rose-400 font-semibold"> FIRST Steps</span>?
               </p>
             </div>
-
+            
             {/* Main Headline */}
             <div className="max-w-4xl mb-8">
               <h1 className="font-display text-4xl md:text-6xl lg:text-7xl leading-tight text-white tracking-tight drop-shadow-2xl">
-                Capture <span className="bg-gradient-to-r from-rose-400 to-rose-500 bg-clip-text text-transparent font-bold">Stunning Baby Photos</span> Using Your Phone in <span className="bg-gradient-to-r from-rose-400 to-rose-500 bg-clip-text text-transparent font-bold relative inline-block">
-                  Just 1 Hour
-                  <span className="absolute -bottom-2 left-0 right-0 h-2 bg-gradient-to-r from-rose-400 to-rose-500 rounded-full opacity-90 transform animate-pulse-slow"></span>
-                </span>
+                Capture <span className="bg-gradient-to-r from-rose-400 to-rose-500 bg-clip-text text-transparent font-bold">Stunning Baby Photos</span> Using Your Phone in <span className="bg-gradient-to-r from-rose-400 to-rose-500 bg-clip-text text-transparent font-bold">Just 1 Hour</span>
               </h1>
             </div>
 
