@@ -10,6 +10,7 @@ deploymentTarget = "static"
 publicDir = "dist"
 buildCommand = "npm run build"
 enableNoJekyll = true
+build = ["sh", "-c", "npm run build"]
 
 [[deployment.rewrites]]
 from = "/*"
