@@ -29,16 +29,16 @@ function App() {
         <Route path="/" element={
           <>
             <Hero />
-            <Introduction />
             <Features />
-            <Comparison />
+            <Questions />
+            <Introduction />
             <Package />
+            <Comparison />
+            <About />
             <Pricing />
             <Bonuses />
-            <Questions />
-            <FAQ />
-            <PS />
             <Vision />
+            <PS />
             <Footer />
           </>
         } />

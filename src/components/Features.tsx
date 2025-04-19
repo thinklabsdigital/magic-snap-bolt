@@ -69,7 +69,7 @@ export function Features() {
             <span className="bg-gradient-to-r from-rose-500 to-rose-600 bg-clip-text text-transparent">
               Magic Snap,
             </span>
-            Turn Your Balcony into a{" "}
+            {" "}e-book, Turn Your Balcony into a{" "}
             <span className="bg-gradient-to-r from-rose-500 to-rose-600 bg-clip-text text-transparent">
               Baby Photo Studio
             </span>{" "}
